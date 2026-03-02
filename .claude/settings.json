@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npm run preview)",
+      "Bash(npx vite *)",
+      "Bash(ls *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ],
+    "deny": [
+      "Edit(package.json)",
+      "Edit(package-lock.json)",
+      "Edit(vite.config.js)",
+      "Edit(.claude/**)",
+      "Edit(node_modules/**)",
+      "Bash(npm install *)",
+      "Bash(npm uninstall *)",
+      "Bash(rm -rf *)",
+      "Bash(rm -f *)",
+      "Bash(sudo *)"
+    ]
+  }
+}

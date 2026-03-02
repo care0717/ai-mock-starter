@@ -1,0 +1,27 @@
+---
+paths:
+  - "src/main.js"
+  - "src/router.js"
+---
+
+## ページの追加方法
+
+1. `src/pages/NewPage.html` を作成
+2. `src/main.js` で `?raw` importし、routerのルート定義に追加
+3. 必要なら `src/components/Header.html` のナビにリンクを追加
+
+```js
+// src/main.js に追加
+import newPage from "./pages/NewPage.html?raw";
+
+const router = createRouter({
+  "/": home,
+  "/new": newPage,  // ← 追加
+});
+```
+
+## ルーティング
+
+- ハッシュベース: `#/`, `#/about`, `#/contact`
+- `src/router.js` の `createRouter()` にルート定義を渡す
+- ページ遷移は `<a href="#/about">` のようにリンクするだけ
